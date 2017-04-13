@@ -1,0 +1,11 @@
+#! /bin/sh
+dedisperse test20.fil -B 8 -d 394 > test1702231.tim
+
+dedisperse test20.fil -B 8 -d 0 > test1702231_dm0.tim
+reader test1702231_dm0.tim > test1702231_dm0.ascii
+
+gnuplot -persist -e "plot 'test1702231_dm0.ascii' with lines"
+/home/vishal/SIGPROC/sigproc/src/fold test1702231.tim -p 5000 -n 64 -o test1702231.sgl
+reader test1702231.tim > test1702231.ascii
+gnuplot -persist -e "plot 'test1702231.ascii' with lines"
+gnuplot -persist -e "plot 'test1702231.sgl' with lines"

@@ -1,0 +1,13 @@
+telescope_id 0
+machine_id 0
+data_type 1
+rawdatafile data_2017
+source_name crab
+barycentric 0
+pulsarcentric 1
+tstart 55500
+tstamp .001
+nbits 16
+fch1 1675
+foff 1150
+nchans 4096
